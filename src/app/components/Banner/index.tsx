@@ -6,7 +6,7 @@ const Banner = () => {
     <section className=" text-white w-full h-[60vh] flex flex-col justify-center">
       <article className=" w-10/12 max-w-[40rem] space-y-5 text-xl font-thin">
         <div className="flex items-center gap-5">
-          <p>Hi I'm </p>
+          <p>Hi I&apos;m </p>
           <Image
             src="/images/jessica.png"
             alt="Jessica"
