@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper-slide div,
+.swiper-slide-prev div,
+.swiper-slide-next div {
+  transform: scale(0.7);
+  transition: 0.5s ease-in-out;
+}
+
+.swiper-slide.swiper-slide-active div {
+  transform: scale(1);
+}

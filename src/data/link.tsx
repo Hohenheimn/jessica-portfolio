@@ -35,3 +35,26 @@ export const menuLinks: {
     url: "/contact",
   },
 ];
+
+export const FooterMenuLinks = [
+  {
+    title: "facebook",
+    href: "#",
+  },
+  {
+    title: "telegram",
+    href: "#",
+  },
+  {
+    title: "gmail",
+    href: "#",
+  },
+  {
+    title: "linkedin",
+    href: "#",
+  },
+  {
+    title: "behance",
+    href: "#",
+  },
+];
