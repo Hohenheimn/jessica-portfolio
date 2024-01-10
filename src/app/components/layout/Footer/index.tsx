@@ -37,7 +37,7 @@ const Footer = () => {
         </ul>
       </footer>
       <div className=" w-full flex justify-center py-2 bg-[#abc54e] text-primary font-bold">
-        <p>@jekisa's portfolio</p>
+        <p>@jekisa&apos;s portfolio</p>
       </div>
     </>
   );

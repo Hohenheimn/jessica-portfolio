@@ -14,7 +14,7 @@ const Heading = ({
   return (
     <div className={`${format === "horizontal" && "flex items-end gap-2 "} `}>
       <h1
-        className={` font-bold text-[3rem] leading-[2.5rem] ${
+        className={` font-bold text-[4rem] leading-[3rem] ${
           color === "green" && "text-secondary"
         } ${color === "white" && "text-white"}`}
       >
