@@ -43,3 +43,7 @@
   transform-origin: top;
   transform: scale(1);
 }
+
+.react-transform-wrapper {
+  height: 100% !important;
+}
