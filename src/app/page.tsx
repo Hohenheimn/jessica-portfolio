@@ -27,7 +27,15 @@ export default function Home() {
           />
         </div>
         <article className=" w-10/12">
-          <Carousel3D data={gaming} type="mobile" />
+          <Carousel3D
+            data={gaming.map((item) => {
+              return {
+                image: `${item.imgBaseUrl}${item.homeImage}`,
+                url: item.url,
+              };
+            })}
+            type="mobile"
+          />
         </article>
       </section>
       <section className=" space-y-5 flex flex-col items-center">
@@ -41,7 +49,14 @@ export default function Home() {
           />
         </div>
         <article className=" w-10/12">
-          <Carousel3D data={webDesign} />
+          <Carousel3D
+            data={gaming.map((item) => {
+              return {
+                image: `${item.imgBaseUrl}${item.homeImage}`,
+                url: item.url,
+              };
+            })}
+          />
         </article>
       </section>
       <section className=" space-y-5 flex flex-col items-center">
@@ -55,7 +70,7 @@ export default function Home() {
           />
         </div>
         <article className=" w-11/12">
-          <CarouselBox data={logo} />
+          <CarouselBox data={logo} containImg={true} />
         </article>
       </section>
       <section className=" space-y-5 flex flex-col items-center">

@@ -19,7 +19,13 @@ import {
 } from "swiper/modules";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
-const CarouselBox = ({ data }: { data: { image: string }[] }) => {
+const CarouselBox = ({
+  data,
+  containImg,
+}: {
+  data: { image: string }[];
+  containImg: boolean;
+}) => {
   const breakpoints = {
     0: {
       slidesPerView: 2,
@@ -50,7 +56,14 @@ const CarouselBox = ({ data }: { data: { image: string }[] }) => {
           <SwiperSlide key={indx}>
             <div className={`  w-full aspect-square slideitem cursor-pointer`}>
               <aside className=" w-full h-full relative">
-                <Image src={item.image} alt="" fill className=" object-cover" />
+                <Image
+                  src={item.image}
+                  alt=""
+                  fill
+                  className={` ${
+                    containImg ? "object-contain" : "object-cover"
+                  }`}
+                />
               </aside>
             </div>
           </SwiperSlide>

@@ -2,6 +2,8 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import "swiper/css";
 import "swiper/css";
@@ -23,9 +25,10 @@ const Carousel3D = ({
   data,
   type,
 }: {
-  data: { image: string }[];
+  data: { image: string; url: string }[];
   type?: "mobile";
 }) => {
+  const router = useRouter();
   const breakpoints = {
     0: {
       slidesPerView: 1,
@@ -58,7 +61,10 @@ const Carousel3D = ({
         {data.map((item, indx) => (
           <SwiperSlide key={indx}>
             <div
-              className={`  w-full ${
+              onClick={() => {
+                router.push(item.url);
+              }}
+              className={`relative group w-full ${
                 type === "mobile" ? "aspect-[1/1.8]" : "aspect-[1/1.5]"
               } slideitem cursor-pointer`}
             >

@@ -16,10 +16,10 @@ const Gallery = () => {
           <li
             key={indx}
             className=" relative w-[300px] aspect-square cursor-pointer rounded-md overflow-hidden"
-            onClick={() => setShow(item.image)}
+            onClick={() => setShow(item?.imgBaseUrl + item?.banner)}
           >
             <Image
-              src={item.image}
+              src={item?.imgBaseUrl + item?.banner}
               alt="image"
               fill
               className=" object-cover"
